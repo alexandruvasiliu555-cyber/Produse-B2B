@@ -243,6 +243,34 @@ h2 {
     text-align: center !important;
     padding-top: 12px; /* ajustează cât vrei */
 }
+  .catalog {
+    counter-reset: produs;
+}
+
+.card {
+    counter-increment: produs;
+    position: relative;
+}
+
+.card::before {
+    content: counter(produs);
+    position: absolute;
+    top: 10px;
+    left: 15px;
+    
+    background: #1e3a8a;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 </style>
 </head>
 <body>
@@ -279,6 +307,10 @@ h2 {
           </video>
         </div>
       </div>
+      <div class="catalog">
+    <div class="card">...</div>
+    <div class="card">...</div>
+</div>
     </article>
 
     <article class="card">
