@@ -326,19 +326,21 @@ h2 {
 }
 
 /* 🔥 STICKY PE MOBIL */
-@media (max-width: 768px) {
-    .footer-info {
-        position: static;
-        bottom: 10px;
-        left: 10px;
-        right: 10px;
-        z-index: 999;
-
-        margin: 0;
-        max-width: none;
-    }
+.footer {
+  text-align: center;
+  padding: 24px 16px 90px; /* lasă loc pentru butonul sticky */
 }
-  .whatsapp-btn {
+
+.footer-content {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.footer-content h3,
+.footer-content p {
+  margin: 8px 0;
+}
+  .whatsapp-sticky {
   position: fixed;
   bottom: 15px;
   left: 50%;
@@ -1062,11 +1064,10 @@ h2 {
     <p>0754 893 127</p>
   </div>
 </footer>
-      <div class="footer-info">
-    <a href="https://wa.me/40754893127" target="_blank" class="whatsapp-btn">
-        💬 Contactează-ne pe WhatsApp
-    </a>
 
+<a href="https://wa.me/40754893127" class="whatsapp-sticky">
+  Contactează-ne pe WhatsApp
+</a>
 </div>
 </body>
 </html>
