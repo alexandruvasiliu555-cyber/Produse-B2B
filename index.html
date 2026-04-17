@@ -459,22 +459,19 @@ h2 {
   }
 }
 .colors {
-  margin-top: 10px;
-  font-size: 14px;
+  margin: 10px 0 16px;
+  text-align: center;
+}
+
+.colors-label {
+  display: block;
+  margin-bottom: 6px;
 }
 
 .color-options {
   display: flex;
-  gap: 8px;
-  margin-top: 5px;
-}
-
-.color {
-  width: 18px;
-  height: 18px;
-  border-radius: 50%;
-  display: inline-block;
-  border: 1px solid #ccc;
+  justify-content: center;
+  gap: 10px;
 }
 
 /* culori */
@@ -2278,6 +2275,18 @@ h2 {
     </div>
   </div>
 
+           <!-- AICI MUTI CULORILE -->
+<div class="colors">
+  <span class="colors-label">Culori disponibile:</span>
+  <div class="color-options">
+    <span class="color purple-light"></span>
+    <span class="color purple-dark"></span>
+    <span class="color black"></span>
+    <span class="color pink"></span>
+    <span class="color blue-light"></span>
+  </div>
+</div>
+           
   <div class="content">
     <div class="badges">
       <div class="badge pret">
@@ -2288,17 +2297,6 @@ h2 {
       <div class="badge stoc">
         <span>Stoc</span>
         <strong>1000 Buc.</strong>
-      </div>
-    </div>
-
-    <div class="colors">
-      <span class="colors-label">Culori disponibile:</span>
-      <div class="color-options">
-        <span class="color purple-light" title="Mov deschis"></span>
-        <span class="color purple-dark" title="Mov închis"></span>
-        <span class="color black" title="Negru"></span>
-        <span class="color pink" title="Roz"></span>
-        <span class="color blue-light" title="Albastru deschis"></span>
       </div>
     </div>
   </div>
