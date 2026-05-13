@@ -489,6 +489,53 @@ h2 {
 .pink { background: #ff9ecb; }
 .blue-light { background: #a7c7e7; }
 .green { background: #b7e4c7; }
+
+  .brands-btn{
+  cursor:pointer;
+  color:#2563eb;
+  font-size:13px;
+  text-align:center;
+  margin-top:10px;
+  font-weight:600;
+}
+
+.popup-overlay{
+  display:none;
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background:rgba(0,0,0,0.5);
+  justify-content:center;
+  align-items:center;
+  z-index:9999;
+}
+
+.popup-box{
+  background:white;
+  padding:25px;
+  border-radius:16px;
+  width:90%;
+  max-width:420px;
+  position:relative;
+  text-align:center;
+}
+
+.close-btn{
+  position:absolute;
+  top:10px;
+  right:15px;
+  font-size:28px;
+  cursor:pointer;
+}
+
+.brands-list{
+  margin-top:15px;
+  line-height:1.8;
+  color:#444;
+  font-size:14px;
+}
 </style>
 </head>
 <body>
@@ -2896,7 +2943,27 @@ h2 {
             <source src="https://imgur.com/Idd8JJE.mp4" type="video/mp4">
           </video>
         </div>
-        <p class="sub">Compatibil cu VW • BMW • Audi • Mercedes • Ferrari • Lamborghini • Rolls-Royce • Nissan • Ford • Hyundai • Skoda • Renault • Mazda • Dacia • Toyota • Honda • Chevrolet • Seat • Jeep • Opel • Alfa Romeo • KIA • Volvo • Tesla • Lexus</p>
+        <p class="sub brands-btn" onclick="openBrands()">
+  Compatibil cu peste 20 de mărci auto
+</p>
+
+<!-- POPUP -->
+<div id="brandsPopup" class="popup-overlay">
+  <div class="popup-box">
+
+    <span class="close-btn" onclick="closeBrands()">×</span>
+
+    <h3>Mărci compatibile</h3>
+
+    <div class="brands-list">
+      VW • BMW • Audi • Mercedes • Ferrari • Lamborghini •
+      Rolls-Royce • Nissan • Ford • Hyundai • Skoda • Renault •
+      Mazda • Dacia • Toyota • Honda • Chevrolet • Seat • Jeep •
+      Opel • Alfa Romeo • KIA • Volvo • Tesla • Lexus
+    </div>
+
+  </div>
+</div>
       <div class="content">
         <div class="badges">
           <div class="badge pret">
@@ -2912,5 +2979,14 @@ h2 {
       </div>
     </article>
      </div>
+<script>
+function openBrands() {
+  document.getElementById("brandsPopup").style.display = "flex";
+}
+
+function closeBrands() {
+  document.getElementById("brandsPopup").style.display = "none";
+}
+</script>
 </body>
 </html>
